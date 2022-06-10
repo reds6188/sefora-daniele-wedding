@@ -6,15 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <!-- The overlay -->
+    <div id="myNav" class="overlay">
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!-- Overlay content -->
+        <div class="overlay-content">
+          <a href="#">HOME</a>
+          <a href="#">CERIMONIA</a>
+          <a href="#">RICEVIMENTO</a>
+          <a href="#">CONTATTI</a>
+        </div>
+    </div>
+
     <div class="page">
         <div id="header">
+            <div id="menu-button" onclick="openNav()"><i class="fa fa-bars text"></i></div>
             <div class="title">Sefora e Daniele</div>
             <div class="subtitle">3 Settembre 2022</div>
         </div>
         <div class="content">
             <img class="banner" src="images/banner.jpg"/>
+            <div>Mancano soltanto:</div>
+            <div id="countdown"></div>
             <div class="box">
                 <p>CERIMONIA</p>
                 La cerimonia si terrà presso il Duomo delle Grazie, San Donà di Piave (VE)
