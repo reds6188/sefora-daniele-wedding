@@ -1,0 +1,61 @@
+body {
+    background-image: url("images/paper.jpg");
+    background-repeat: repeat;
+}
+
+.page {
+    position: absolute;
+    top: 20px;
+    /*bottom: 20px;*/
+    left: 20px;
+    right: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    margin: 10px auto;
+    text-align: center;
+    font-family: 'Dancing Script';
+    font-size: 36px;
+    color: crimson;
+}
+
+.subtitle {
+    margin: 10px auto;
+    text-align: center;
+    font-family: 'Dancing Script';
+    font-size: 24px;
+    color: crimson;
+}
+
+.banner {
+    width: 100%;
+}
+
+
+.content {
+    font-family: 'Calibri';
+    color: DarkSlateGray;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    width: 100% - 40px;
+}
+
+.sticky + .content {
+    padding-top: 102px;
+  }
+
+.box {
+    margin: 10px;
+}
+
+#header {
+    background-color: white;
+}
