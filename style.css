@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "DancingScript";
+    src: url("fonts/DancingScript/static/DancingScript-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+}
+
 body {
     background-image: url("images/paper.jpg");
     background-repeat: repeat;
@@ -36,7 +46,7 @@ body {
 
 
 .content {
-    font-family: 'Calibri';
+    font-family: 'Roboto';
     color: DarkSlateGray;
 }
 
