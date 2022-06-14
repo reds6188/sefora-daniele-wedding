@@ -31,9 +31,8 @@ body {
     filter: invert(16%) sepia(99%) saturate(5863%) hue-rotate(343deg) brightness(90%) contrast(91%);
 }
 
-.avatar-mini {
+.avatar.mini {
     height: 20px;
-    filter: invert(16%) sepia(99%) saturate(5863%) hue-rotate(343deg) brightness(90%) contrast(91%);
 }
 
 .avatar-title {
