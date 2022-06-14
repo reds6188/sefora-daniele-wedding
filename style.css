@@ -1,6 +1,6 @@
 @font-face {
     font-family: "DancingScript";
-    src: url("fonts/DancingScript/static/DancingScript-Regular.ttf") format("truetype");
+    src: url("fonts/DancingScript/DancingScript-VariableFont_wght.ttf") format("truetype");
 }
 
 @font-face {
@@ -11,6 +11,30 @@
 body {
     background-image: url("images/paper.jpg");
     background-repeat: repeat;
+}
+
+#menu-button > i {
+    font-size: 50px;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.section {
+    margin: 10px;
+    text-align: center;
+}
+
+.avatar {
+    height: 50px;
+    filter: invert(16%) sepia(99%) saturate(5863%) hue-rotate(343deg) brightness(90%) contrast(91%);
+}
+
+.avatar-title {
+    text-align: center;
+    color: crimson;
+    font-size: 50px;
 }
 
 #countdown {
@@ -121,6 +145,7 @@ body {
     padding: 8px;
     text-decoration: none;
     font-size: 36px;
+    font-family: 'Roboto';
     color: #818181;
     display: block; /* Display block instead of inline */
     transition: 0.3s; /* Transition effects on hover (color) */
@@ -129,6 +154,10 @@ body {
 /* When you mouse over the navigation links, change their color */
 .overlay a:hover, .overlay a:focus {
     color: #f1f1f1;
+}
+
+.overlay a:active {
+    background-color: crimson;
 }
   
 /* Position the close button (top right corner) */

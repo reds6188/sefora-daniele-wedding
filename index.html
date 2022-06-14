@@ -15,10 +15,10 @@
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <!-- Overlay content -->
         <div class="overlay-content">
-          <a href="#">HOME</a>
+          <a href="javascript:showSection('home')">HOME</a>
           <a href="#">CERIMONIA</a>
           <a href="#">RICEVIMENTO</a>
-          <a href="#">CONTATTI</a>
+          <a href="javascript:showSection('contatti')">CONTATTI</a>
         </div>
     </div>
 
@@ -30,31 +30,29 @@
         </div>
         <div class="content">
             <img class="banner" src="images/banner.jpg"/>
-            <div>Mancano soltanto:</div>
-            <div id="countdown"></div>
-            <div class="box">
-                <p>CERIMONIA</p>
-                La cerimonia si terrà presso il Duomo delle Grazie, San Donà di Piave (VE)
+            <div id="home" class="section">
+                <div>Mancano soltanto:</div>
+                <div id="countdown"></div>
+                <div class="box">
+                    <p>CERIMONIA</p>
+                    La cerimonia si terrà presso il Duomo delle Grazie, San Donà di Piave (VE)
+                </div>
             </div>
-            <div class="box">
-                <p>RICEVIMENTO</p>
-                IL ricevimento si terrà presso il ristorante "Ai Sette Nani"
-            </div>
-            <div class="box">
-                <p>RIEMPITIVO</p>
-                Del testo riempitivo per allungare il contenuto della pagina web
-            </div>
-            <div class="box">
-                <p>RIEMPITIVO2</p>
-                Del testo riempitivo per allungare il contenuto della pagina web2
-            </div>
-            <div class="box">
-                <p>RIEMPITIVO3</p>
-                Del testo riempitivo per allungare il contenuto della pagina web3
-            </div>
-            <div class="box">
-                <p>RIEMPITIVO4</p>
-                Del testo riempitivo per allungare il contenuto della pagina web4
+            <div id="contatti" class="section">
+                <div>
+                    <img src="images/avatar-sposa.svg" class="avatar"/> <span class="avatar-title">SPOSA</span>
+                    <p class="text-bold">Maria Sefora Casagrande</p>
+                    <p>Tel. 340 702147</p>
+                    <p>Corso Silvio Trentin, 101</p>
+                    <p>30027 San Donà di Piave (VE)</p>
+                </div>
+                <div>
+                    <img src="images/avatar-sposo.svg" class="avatar"/> <span class="avatar-title">SPOSO</span>
+                    <p class="text-bold">Daniele Rossi</p>
+                    <p>Tel. 348 4002187</p>
+                    <p>Via degli Alpini, 8</p>
+                    <p>31043 Fontanelle (TV)</p>
+                </div>
             </div>
         </div>
     </div>

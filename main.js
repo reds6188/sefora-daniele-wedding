@@ -1,3 +1,21 @@
+window.onload = function() {
+  const sections = document.querySelectorAll("div.section");
+  for(item of sections) {
+    item.classList.add("hidden");
+  }
+
+  document.getElementById("home").classList.remove("hidden");
+}
+
+function showSection(section) {
+  closeNav();
+  const sections = document.querySelectorAll("div.section");
+  for(item of sections) {
+    item.classList.add("hidden");
+  }
+  document.getElementById(section).classList.remove("hidden");
+}
+
 window.onresize = function() {
   if(screen.width < 400) {
     document.getElementById("menu-button").classList.remove("hidden");
