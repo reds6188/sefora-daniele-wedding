@@ -31,11 +31,26 @@ body {
     filter: invert(16%) sepia(99%) saturate(5863%) hue-rotate(343deg) brightness(90%) contrast(91%);
 }
 
+.avatar-mini {
+    height: 20px;
+    filter: invert(16%) sepia(99%) saturate(5863%) hue-rotate(343deg) brightness(90%) contrast(91%);
+}
+
 .avatar-title {
     text-align: center;
     color: crimson;
     font-size: 50px;
 }
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.box {
+    margin: 10px;
+}
+
 
 #countdown {
     text-align: center;
@@ -95,10 +110,6 @@ body {
 .sticky + .content {
     padding-top: 102px;
   }
-
-.box {
-    margin: 10px;
-}
 
 #header {
     background-color: white;

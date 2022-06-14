@@ -1,12 +1,3 @@
-window.onload = function() {
-  const sections = document.querySelectorAll("div.section");
-  for(item of sections) {
-    item.classList.add("hidden");
-  }
-
-  document.getElementById("home").classList.remove("hidden");
-}
-
 function showSection(section) {
   closeNav();
   const sections = document.querySelectorAll("div.section");
