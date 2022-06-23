@@ -8,11 +8,11 @@ function showSection(section) {
 }
 
 window.onresize = function() {
-  if(screen.width < 400) {
-    document.getElementById("menu-button").classList.remove("hidden");
+  if(window.innerWidth < 400) {
+    document.getElementById("menu-btn").classList.remove("hidden");
   }
   else {
-    document.getElementById("menu-button").classList.add("hidden");
+    document.getElementById("menu-btn").classList.add("hidden");
   }
 };
 
