@@ -7,6 +7,18 @@ body {
     background-repeat: repeat;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: darkslategray;
+}
+
+a:hover {
+    color: crimson;
+}
+
 .container {
     display: flex;
     flex-direction: column;
