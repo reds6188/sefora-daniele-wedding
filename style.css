@@ -109,6 +109,7 @@ body {
     color: DarkSlateGray;
 }
 
+/*
 .sticky {
     position: fixed;
     top: 0;
@@ -123,6 +124,14 @@ body {
 
 #header {
     background-color: white;
+    z-index: 1;
+}
+*/
+
+#header {
+    position: sticky; top: 0;
+    background-color: white;
+    z-index: 1;
 }
 
 #menu-button {
@@ -143,7 +152,7 @@ body {
     height: 100%;
     width: 0;
     position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    z-index: 2; /* Sit on top */
     left: 0;
     top: 0;
     background-color: rgb(0,0,0); /* Black fallback color */
@@ -175,10 +184,11 @@ body {
 /* When you mouse over the navigation links, change their color */
 .overlay a:hover, .overlay a:focus {
     color: #f1f1f1;
+    background-color: crimson;
 }
 
 .overlay a:active {
-    background-color: crimson;
+    background-color: red;
 }
   
 /* Position the close button (top right corner) */

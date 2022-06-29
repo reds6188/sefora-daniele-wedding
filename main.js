@@ -17,6 +17,7 @@ window.onresize = function() {
 };
 
 // When the user scrolls the page, execute myFunction
+/*
 window.onscroll = function() {myFunction()};
 
 // Get the header
@@ -33,6 +34,7 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
+*/
 
 // Open when someone clicks on the span element
 function openNav() {
