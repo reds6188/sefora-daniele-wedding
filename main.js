@@ -7,15 +7,44 @@ function showSection(section) {
   document.getElementById(section).classList.remove("hidden");
 }
 
-window.onresize = function() {
-  if(window.innerWidth < 400) {
+function checkWidth() {
+  console.log(`Inner width is: ${window.innerWidth}`)
+  if(window.innerWidth < 500) {
+    document.getElementById("menu").classList.add("hidden");
     document.getElementById("menu-btn").classList.remove("hidden");
   }
   else {
+    document.getElementById("menu").classList.remove("hidden");
+    document.getElementById("menu-btn").classList.add("hidden");
+  }
+}
+
+/*
+window.onload = checkWidth();
+window.onresize = checkWidth();
+*/
+
+window.addEventListener('resize', checkWidth);
+window.addEventListener('load', checkWidth);
+
+/*
+function reportWindowSize() {
+  console.log(`Inner width is: ${window.innerWidth}`)
+}
+*/
+
+/*
+window.onresize = function() {
+  if(window.innerWidth < 400) {
+    document.getElementById("menu").classList.add("hidden");
+    document.getElementById("menu-btn").classList.remove("hidden");
+  }
+  else {
+    document.getElementById("menu").classList.remove("hidden");
     document.getElementById("menu-btn").classList.add("hidden");
   }
 };
-
+*/
 // When the user scrolls the page, execute myFunction
 /*
 window.onscroll = function() {myFunction()};

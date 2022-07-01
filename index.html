@@ -15,15 +15,24 @@
     <div id="myNav" class="overlay">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <div class="overlay-content">
-          <a href="javascript:showSection('home')">HOME</a>
-          <a href="javascript:showSection('cerimonia')">CERIMONIA</a>
-          <a href="javascript:showSection('ricevimento')">RICEVIMENTO</a>
-          <a href="javascript:showSection('social')">SOCIAL</a>
-          <a href="javascript:showSection('contatti')">CONTATTI</a>
+          <div><a href="javascript:showSection('home')">HOME</a></div>
+          <div><a href="javascript:showSection('cerimonia')">CERIMONIA</a></div>
+          <div><a href="javascript:showSection('ricevimento')">RICEVIMENTO</a></div>
+          <div><a href="javascript:showSection('social')">SOCIAL</a></div>
+          <div><a href="javascript:showSection('contatti')">CONTATTI</a></div>
         </div>
     </div>
     <div class="page">
         <div id="header" class="container">
+            <div id="menu" class="box">
+                <div id="menu-list">
+                    <a class="menu-item text" href="javascript:showSection('home')">HOME</a>
+                    <a class="menu-item text" href="javascript:showSection('cerimonia')">CERIMONIA</a>
+                    <a class="menu-item text" href="javascript:showSection('ricevimento')">RICEVIMENTO</a>
+                    <a class="menu-item text" href="javascript:showSection('social')">SOCIAL</a>
+                    <a class="menu-item text" href="javascript:showSection('contatti')">CONTATTI</a>
+                </div>
+            </div>
             <div class="box menu-button" id="menu-btn" onclick="openNav()">
                 <i class="fa fa-bars text"></i>
             </div>
