@@ -97,13 +97,6 @@ a:hover {
     z-index:999;
 }
 
-/*
-.church {
-    background-image: url("images/svg/church.svg");
-    background-repeat: no-repeat;
-}
-*/
-
 .avatar.mini {
     height: 20px;
 }
@@ -118,6 +111,7 @@ a:hover {
     text-align: center;
     color: crimson;
     font-size: 24px;
+    padding: 50px;
 }
 
 .page {
@@ -144,25 +138,6 @@ a:hover {
     font-family: 'Roboto';
     color: DarkSlateGray;
 }
-
-/*
-.sticky {
-    position: fixed;
-    top: 0;
-    left: 20px;
-    right: 20px;
-    width: 100% - 40px;
-}
-
-.sticky + .content {
-    padding-top: 102px;
-  }
-
-#header {
-    background-color: white;
-    z-index: 1;
-}
-*/
 
 #header {
     position: sticky; top: 0;

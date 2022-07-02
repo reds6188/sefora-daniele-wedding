@@ -1,69 +1,30 @@
-function showSection(section) {
-  closeNav();
-  const sections = document.querySelectorAll("div.section");
-  for(item of sections) {
-    item.classList.add("hidden");
-  }
-  document.getElementById(section).classList.remove("hidden");
-}
+// Show menu button (for mobile) or extend menu (for desktop) ---------------------------
 
 function checkWidth() {
-  console.log(`Inner width is: ${window.innerWidth}`)
-  if(window.innerWidth < 500) {
-    document.getElementById("menu").classList.add("hidden");
-    document.getElementById("menu-btn").classList.remove("hidden");
-  }
-  else {
-    document.getElementById("menu").classList.remove("hidden");
-    document.getElementById("menu-btn").classList.add("hidden");
-  }
+	console.log(`Inner width is: ${window.innerWidth}`)
+	if(window.innerWidth < 500) {
+		document.getElementById("menu").classList.add("hidden");
+		document.getElementById("menu-btn").classList.remove("hidden");
+	}
+	else {
+		document.getElementById("menu").classList.remove("hidden");
+		document.getElementById("menu-btn").classList.add("hidden");
+	}
 }
 
-/*
-window.onload = checkWidth();
-window.onresize = checkWidth();
-*/
+window.addEventListener('load', checkWidth);	// Rendering on window load
+window.addEventListener('resize', checkWidth);	// Rendering on window resize
 
-window.addEventListener('resize', checkWidth);
-window.addEventListener('load', checkWidth);
+//---------------------------------------------------------------------------------------
 
-/*
-function reportWindowSize() {
-  console.log(`Inner width is: ${window.innerWidth}`)
-}
-*/
-
-/*
-window.onresize = function() {
-  if(window.innerWidth < 400) {
-    document.getElementById("menu").classList.add("hidden");
-    document.getElementById("menu-btn").classList.remove("hidden");
+function showSection(section) {
+	closeNav();
+	const sections = document.querySelectorAll("div.section");
+	for(item of sections) {
+	  item.classList.add("hidden");
+	}
+	document.getElementById(section).classList.remove("hidden");
   }
-  else {
-    document.getElementById("menu").classList.remove("hidden");
-    document.getElementById("menu-btn").classList.add("hidden");
-  }
-};
-*/
-// When the user scrolls the page, execute myFunction
-/*
-window.onscroll = function() {myFunction()};
-
-// Get the header
-var header = document.getElementById("header");
-
-// Get the offset position of the navbar
-var sticky = header.offsetTop;
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
-*/
 
 // Open when someone clicks on the span element
 function openNav() {
@@ -74,6 +35,8 @@ function openNav() {
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
 }
+
+// Countdown ----------------------------------------------------------------------------
 
 // Set the date we're counting down to
 var countDownDate = new Date("Sep 3, 2022 11:00:00").getTime();
@@ -94,8 +57,8 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  document.getElementById("countdown").innerHTML = days + " giorni " + hours + " ore "
+  + minutes + " minuti " + seconds + " secondi ";
 
   // If the count down is finished, write some text
   if (distance < 0) {
