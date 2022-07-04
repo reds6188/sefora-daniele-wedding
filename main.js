@@ -21,7 +21,7 @@ function copy() {
   var copyText = document.getElementById("album-code");
   navigator.clipboard.writeText(copyText.innerText);
 
-  alert("Copied the text: " + copyText.innerText);
+  alert("Testo copiato: " + copyText.innerText);
 }
 
 function showSection(section) {
