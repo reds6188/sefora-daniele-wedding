@@ -17,6 +17,13 @@ window.addEventListener('resize', checkWidth);	// Rendering on window resize
 
 //---------------------------------------------------------------------------------------
 
+function copy() {
+  var copyText = document.getElementById("album-code");
+  navigator.clipboard.writeText(copyText.innerText);
+
+  alert("Copied the text: " + copyText.innerText);
+}
+
 function showSection(section) {
 	closeNav();
 	const sections = document.querySelectorAll("div.section");
