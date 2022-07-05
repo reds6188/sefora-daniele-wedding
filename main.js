@@ -97,14 +97,13 @@ var x = setInterval(function() {
 }, 1000);
 
 // Banner SLideshow ----------------------------------------------------------------------------
+var current = 0,
+    slides = document.getElementsByClassName("img-banner");
 
-function imageTransition() {
-	var banner = document.getElementById('banner');
-	var fadeComplete = function(e) { banner.appendChild(arr[0]); };
-	var arr = banner.getElementsByTagName("a");
-	for(var i=0; i < arr.length; i++) {
-		arr[i].addEventListener("animationend", fadeComplete, false);
-	}
-}
-
-setInterval(imageTransition, 1000)
+setInterval(function() {
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].style.opacity = 0;
+  }
+  current = (current != slides.length - 1) ? current + 1 : 0;
+  slides[current].style.opacity = 1;
+}, 3000);
