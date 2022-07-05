@@ -18,7 +18,7 @@
           <div><a href="javascript:showSection('home')">HOME</a></div>
           <div><a href="javascript:showSection('cerimonia')">CERIMONIA</a></div>
           <div><a href="javascript:showSection('ricevimento')">RICEVIMENTO</a></div>
-          <div><a href="javascript:showSection('social')">SOCIAL</a></div>
+          <div><a href="javascript:showSection('album')">ALBUM</a></div>
           <div><a href="javascript:showSection('contatti')">CONTATTI</a></div>
         </div>
     </div>
@@ -29,7 +29,7 @@
                     <a class="menu-item text" href="javascript:showSection('home')">HOME</a>
                     <a class="menu-item text" href="javascript:showSection('cerimonia')">CERIMONIA</a>
                     <a class="menu-item text" href="javascript:showSection('ricevimento')">RICEVIMENTO</a>
-                    <a class="menu-item text" href="javascript:showSection('social')">SOCIAL</a>
+                    <a class="menu-item text" href="javascript:showSection('album')">ALBUM</a>
                     <a class="menu-item text" href="javascript:showSection('contatti')">CONTATTI</a>
                 </div>
             </div>
@@ -40,7 +40,12 @@
             <div class="box subtitle">3 Settembre 2022</div>
         </div>
         <div class="content">
-            <img class="banner" src="images/banner.jpg"/>
+            <div id="banner">
+                <a href="#"><img class="img-banner" src="images/banner_768x276_00.jpg"/></a>
+                <a href="#"><img class="img-banner" src="images/banner_768x276_01.jpg"/></a>
+                <a href="#"><img class="img-banner" src="images/banner_768x276_02.jpg"/></a>
+            </div>
+            <!-- <img id="banner" class="fade-in" src="images/banner_768x276_00.jpg" onclick="imageTransition()"/> -->
             <div id="home" class="section">
                 <div>Mancano soltanto:</div>
                 <div id="countdown"></div>
@@ -115,22 +120,36 @@
                     </div>
                 </div>
             </div>
-            <div id="social" class="section hidden">
+            <div id="album" class="section hidden">
                 Vuoi essere partecipe all'album?<br/>
-                Scarica l'app WEDSHOOTS e partecipa all'evento inserendo il codice album
-                <div>
-                    <b id="album-code">IT874ea579</b> <a href="javascript:copy()"><img src="images/svg/copy.svg" class="avatar mini" alt="Copia"/></a>
+                Scarica l'app WedShoots, inserisci il codice album riportato qui sotto e condividi le tue foto con gli sposi!
+                <div id="chip" onclick="copy()">
+                    <!-- <b id="album-code">IT874ea579</b> <a href="javascript:copy()"><img src="images/svg/copy.svg" class="avatar mini" alt="Copia"/></a> -->
+                    <span id="album-code">IT874ea579</span> <img src="images/svg/copy.svg" class="avatar white mini" alt="Copia"/>
+                    <!-- <span id="tt" class="tooltiptext tooltip-hide">Copied!</span> -->
                 </div>
-
-
                 <p>
+                    Scarica subito WedShoots!
+                </p>
+                <a href="https://play.google.com/store/apps/details?id=net.bodas.android.wedshoots&referrer=af_tranid%3DNkqq4G5Hv0b_H6y1Es1lTg%26pid%3DWP-Android-IT%26c%3DWP-IT-LANDINGS" target="_blank">
+                    <img class="badge" src="images/svg/google-play-badge.svg" alt="Google Play"/>
+                </a>
+                <a href="https://apps.apple.com/ES/app/id660256196?mt=8" target="_blank">
+                    <img class="badge" src="images/svg/apple-store-badge.svg" alt="Apple Store"/>
+                </a>
+                
+                <!-- <p>
                     <a href="https://play.google.com/store/apps/details?id=net.bodas.android.wedshoots&referrer=af_tranid%3DNkqq4G5Hv0b_H6y1Es1lTg%26pid%3DWP-Android-IT%26c%3DWP-IT-LANDINGS" target="_blank">
-                        <img class="avatar" src="images/svg/google-play.svg" alt="Google Play"/>
-                    </a>
-                    <a href="https://apps.apple.com/ES/app/id660256196?mt=8" target="_blank">
-                        <img class="avatar" src="images/svg/app-store.svg" alt="Apple Store"/>
+                        <div class="row"><img class="avatar" src="images/svg/google-play.svg" alt="Google Play"/></div>
+                        <div class="row">Disponibile su<br/>Google Play</div>
                     </a>
                 </p>
+                <p>
+                    <a href="https://apps.apple.com/ES/app/id660256196?mt=8" target="_blank">
+                        <img class="avatar" src="images/svg/app-store.svg" alt="Apple Store"/>
+                        Disponibile su<br/>App Store
+                    </a>
+                </p> -->
             </div>
             <div id="contatti" class="section hidden">
                 <div>

@@ -99,12 +99,20 @@ a:hover {
 
 .avatar {
     height: 50px;
-    filter: invert(16%) sepia(99%) saturate(5863%) hue-rotate(343deg) brightness(90%) contrast(91%);
+    filter: invert(16%) sepia(99%) saturate(5863%) hue-rotate(343deg) brightness(90%) contrast(91%);    /* = crimson */
     z-index:999;
 }
 
 .avatar.mini {
     height: 20px;
+}
+
+.avatar.white {
+    filter: invert(100%) sepia(77%) saturate(1%) hue-rotate(50deg) brightness(107%) contrast(101%);
+}
+
+.badge {
+    height: 50px;
 }
 
 .avatar-title {
@@ -131,7 +139,12 @@ a:hover {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.banner {
+#banner {
+    width: 100%;
+    padding-bottom: 36%;
+}
+
+.img-banner {
     width: 100%;
 }
 
@@ -148,7 +161,7 @@ a:hover {
 #header {
     position: sticky; top: 0;
     background-color: white;
-    z-index: 1;
+    z-index: 998;
 }
 
 #menu-button {
@@ -161,7 +174,27 @@ a:hover {
     display: none;
 }
 
-/* CURTAIN MENU */
+#chip {
+    margin: 10px auto;
+    width: 170px;
+    color: white;
+    background-color: crimson;
+    padding: 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+#chip:hover {
+    opacity: 0.75;
+}
+
+#chip.copied {
+    transition: 0.1s;
+    background-color: green;
+}
+
+/* -------------------------- CURTAIN MENU --------------------------*/
 
 /* The Overlay (background) */
 .overlay {
@@ -169,7 +202,7 @@ a:hover {
     height: 100%;
     width: 0;
     position: fixed; /* Stay in place */
-    z-index: 2; /* Sit on top */
+    z-index: 999; /* Sit on top */
     left: 0;
     top: 0;
     background-color: rgb(0,0,0); /* Black fallback color */
@@ -227,4 +260,53 @@ a:hover {
         top: 15px;
         right: 35px;
     }
+}
+
+/* -------------------------- TOOLTIP -------------------------- */
+
+.tooltiptext {
+    padding: 2px;
+    background-color: green;
+    color: #fff;
+    /*
+    transition: 2s;
+    opacity: 0;
+    */
+}
+
+.tooltip-show {
+    visibility: visible;
+    /*transition: 0.2s;*/
+    opacity: 1;
+}
+
+.tooltip-hide {
+    visibility: hidden;
+    transition: 1s;
+    opacity: 0;
+}
+
+/* -------------------------- BANNER SLIDESHOW -------------------------- */
+
+#banner a {
+    position: absolute;
+}
+
+#banner a:nth-of-type(1) {
+    animation-name: fader;
+    animation-delay: 4s;
+    animation-duration: 1s;
+    z-index: 20;
+}
+#banner a:nth-of-type(2) {
+    z-index: 10;
+}
+
+#banner a:nth-of-type(n+3) {
+    display: none;
+}
+
+@keyframes fader {
+    from { opacity: 1.0; }
+    to   { opacity: 0.0; }
 }

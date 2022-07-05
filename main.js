@@ -10,6 +10,15 @@ function checkWidth() {
 		document.getElementById("menu").classList.remove("hidden");
 		document.getElementById("menu-btn").classList.add("hidden");
 	}
+
+	//console.log(document.getElementById("banner").offsetWidth);
+	/*
+	console.log(document.getElementById("banner").offsetWidth);
+	var banner = document.getElementById("banner");
+	bannerWidth = banner.offsetWidth;
+	bannerHeight = `${bannerWidth / 2.7826}px`;
+	banner.setAttribute('height', bannerHeight);
+	*/
 }
 
 window.addEventListener('load', checkWidth);	// Rendering on window load
@@ -18,10 +27,23 @@ window.addEventListener('resize', checkWidth);	// Rendering on window resize
 //---------------------------------------------------------------------------------------
 
 function copy() {
-  var copyText = document.getElementById("album-code");
-  navigator.clipboard.writeText(copyText.innerText);
+	var copyText = document.getElementById("album-code");
+	var chip = document.getElementById("chip");
+	navigator.clipboard.writeText(copyText.innerText);
+	chip.classList.add("copied");
+	copyText.innerText = "Copiato!";
+	setTimeout(() => {
+		chip.classList.remove("copied");
+		copyText.innerText = 'IT874ea579';
+	},3000);
 
-  alert("Testo copiato: " + copyText.innerText);
+	/*
+  document.getElementById("tt").classList.replace("tooltip-hide","tooltip-show")
+  setTimeout(() => {
+    document.getElementById("tt").classList.replace("tooltip-show","tooltip-hide")
+  },3000);
+  */
+  //alert("Testo copiato: " + copyText.innerText);
 }
 
 function showSection(section) {
@@ -73,3 +95,16 @@ var x = setInterval(function() {
     document.getElementById("countdown").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+// Banner SLideshow ----------------------------------------------------------------------------
+
+function imageTransition() {
+	var banner = document.getElementById('banner');
+	var fadeComplete = function(e) { banner.appendChild(arr[0]); };
+	var arr = banner.getElementsByTagName("a");
+	for(var i=0; i < arr.length; i++) {
+		arr[i].addEventListener("animationend", fadeComplete, false);
+	}
+}
+
+setInterval(imageTransition, 1000)
