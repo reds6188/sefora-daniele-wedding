@@ -5,6 +5,31 @@
 body {
     background-image: url("images/paper.jpg");
     background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+    .page {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        right: 20px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .page {
+        position: absolute;
+        top: 20px;
+        width: 600px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
 }
 
 a {
@@ -12,6 +37,10 @@ a {
 }
 
 a:visited {
+    color: darkslategray;
+}
+
+a:active {
     color: darkslategray;
 }
 
@@ -126,17 +155,6 @@ a:hover {
     color: crimson;
     font-size: 24px;
     padding: 50px;
-}
-
-.page {
-    position: absolute;
-    top: 20px;
-    /*bottom: 20px;*/
-    left: 20px;
-    right: 20px;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #banner {
