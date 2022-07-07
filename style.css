@@ -36,11 +36,7 @@ a {
     text-decoration: none;
 }
 
-a:visited {
-    color: darkslategray;
-}
-
-a:active {
+a:link, a:visited, a:active {
     color: darkslategray;
 }
 
@@ -52,6 +48,7 @@ a:hover {
     padding: 1px 10px;
     color: lightgrey;
     font-size: 12px;
+    text-align: center;
 }
 
 /* Desktop menu */
@@ -81,12 +78,10 @@ a:hover {
 .container {
     display: flex;
     flex-direction: column;
-    /*background-color: lime;*/
 }
 
 .box {
     margin: 10px;
-    /*background-color: yellow;*/
     width: 100%;
 }
 
