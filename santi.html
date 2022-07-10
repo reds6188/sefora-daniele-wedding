@@ -5,17 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generatore Casuale di Santi</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="santi.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Berkshire Swash">
 </head>
 <body>
     <div class="card container">
-        <div id="name"></div>
-        <div id="figure"><img/></div>
-        <div id="caption"></div>
-        <div id="footer">
-            <div onclick="window.location = '/index.html'">INDIETRO</div>
-            <div onclick="randomCard()">INVOCA UN SANTO</div>
+        <div id="name" class="box ancient"></div>
+        <div id="figure"><img></div>
+        <div id="caption" class="box ancient"></div>
+        <div id="footer" class="box">
+            <button class="btn" onclick="window.location = '/index.html'">INDIETRO</button>
+            <button class="btn" onclick="randomCard()">INVOCA UN SANTO</button>
         </div>
     </div>
     <script src="game.js"></script>

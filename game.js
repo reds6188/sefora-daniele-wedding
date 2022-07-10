@@ -311,6 +311,15 @@ const santi = [
     }
 ];
 
+function checkWidth() {
+	let image = document.querySelector("#figure img");
+	image.height = document.getElementById("figure").offsetHeight;
+	console.log(image.height)
+}
+
+window.addEventListener('load', checkWidth);	// Rendering on window load
+window.addEventListener('resize', checkWidth);	// Rendering on window resize
+
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
@@ -319,6 +328,7 @@ function randomCard() {
     const len = santi.length;
     const index = getRandomInt(len);
     document.getElementById("name").innerText = santi[index].name;
-    document.querySelector("#figure img").src = `images/santi/${santi[index].source}.jpg`;
+    let image = document.querySelector("#figure img");
+    image.src = `images/santi/${santi[index].source}.jpg`;
     document.getElementById("caption").innerText = santi[index].caption;
 }

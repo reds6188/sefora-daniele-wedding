@@ -1,3 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("images/paper.jpg");
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+}
+
 @media screen and (max-width: 600px) {
     .card {
         position: absolute;
@@ -5,9 +16,6 @@
         left: 20px;
         right: 20px;
         bottom: 20px;
-        border-radius: 10px;
-        background-color: peru;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
 }
 
@@ -17,19 +25,61 @@
         top: 20px;
         width: 600px;
         bottom: 20px;
-        border-radius: 10px;
-        background-color: peru;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     }
 }
 
-#name, #caption{
-    font-family: Georgia, serif;
+.card {
+    border: 10px solid white;
+    border-radius: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    background-color: peru;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.ancient {
+    font-family: 'Berkshire Swash';
+}
+
+#name {
+    font-size: 32px;
+}
+
+#caption {
+    font-size: 20px;
+}
+
+.box {
     text-align: center;
-    height: 20px;
+    padding: 20px;
+    flex-basis: 5rem;
+}
+
+.btn {
+    background-color: brown;
+    color: white;
+    padding: 10px;
+    border: 0 none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: darkred;
+}
+
+#figure {
+    flex-basis: 30rem;
+    overflow: hidden;
 }
 
 #figure img {
-    width: 50%;
-    margin: auto;
+    /*width: 50%;*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*margin: auto;*/
 }
