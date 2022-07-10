@@ -161,14 +161,10 @@ a:hover {
     width: 100%;
 }
 
-.text {
+.text, .content {
     font-family: 'Roboto';
     color: DarkSlateGray;
-}
-
-.content {
-    font-family: 'Roboto';
-    color: DarkSlateGray;
+    font-size: 18px;
 }
 
 #header {
