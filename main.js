@@ -1,7 +1,7 @@
 // Show menu button (for mobile) or extend menu (for desktop) ---------------------------
 
 function checkWidth() {
-	console.log(`Inner width is: ${window.innerWidth}`)
+	//console.log(`Inner width is: ${window.innerWidth}`)
 	if(window.innerWidth < 500) {
 		document.getElementById("menu").classList.add("hidden");
 		document.getElementById("menu-btn").classList.remove("hidden");
@@ -10,15 +10,6 @@ function checkWidth() {
 		document.getElementById("menu").classList.remove("hidden");
 		document.getElementById("menu-btn").classList.add("hidden");
 	}
-
-	//console.log(document.getElementById("banner").offsetWidth);
-	/*
-	console.log(document.getElementById("banner").offsetWidth);
-	var banner = document.getElementById("banner");
-	bannerWidth = banner.offsetWidth;
-	bannerHeight = `${bannerWidth / 2.7826}px`;
-	banner.setAttribute('height', bannerHeight);
-	*/
 }
 
 window.addEventListener('load', checkWidth);	// Rendering on window load
@@ -36,14 +27,6 @@ function copy() {
 		chip.classList.remove("copied");
 		copyText.innerText = 'IT874ea579';
 	},3000);
-
-	/*
-  document.getElementById("tt").classList.replace("tooltip-hide","tooltip-show")
-  setTimeout(() => {
-    document.getElementById("tt").classList.replace("tooltip-show","tooltip-hide")
-  },3000);
-  */
-  //alert("Testo copiato: " + copyText.innerText);
 }
 
 function showSection(section) {
@@ -108,8 +91,33 @@ setInterval(function() {
   slides[current].style.opacity = 1;
 }, 3000);
 
+let clickCnt = 0;
+let timer;
 
-
+// Hidden function --------------------------------------------------------------------------------
 function doNothing() {
-	window.location = '/santi.html'
+	let counter = document.getElementById("hidden-cnt");
+	clearTimeout(timer);
+	clickCnt++;
+	//console.log(clickCnt)
+	if(clickCnt > 0) {
+		counter.classList.add("show");
+		if(clickCnt == 4) {
+			counter.classList.replace("grn","ylw");
+		}
+		else if(clickCnt == 8) {
+			counter.classList.replace("ylw","red");
+		}
+	}
+	counter.innerText = clickCnt;
+	timer = setTimeout(() => {
+		clickCnt = 0;
+		//console.log('reset!');
+		counter.classList.remove("show");
+		counter.classList.remove(...counter.classList);
+		counter.classList.add("grn");
+	}, 500);
+	if(clickCnt == 10) {
+		window.location = '/santi.html';
+	}
 }

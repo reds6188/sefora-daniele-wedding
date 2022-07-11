@@ -30,8 +30,10 @@ body {
 
 .card {
     border: 10px solid white;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    background-image: url("images/ancient.jpg");
+    background-repeat: no-repeat;
     background-color: peru;
 }
 

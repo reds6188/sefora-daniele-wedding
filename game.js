@@ -308,13 +308,37 @@ const santi = [
       name: "San Culotto",
       caption: "Protettore dei rivoluzionari francesi",
       source: "sanculotto"
+    },
+    {
+      name: "San Giovanni",
+      caption: "Protettore di Amici di Maria",
+      source: "sangiovanni"
+    },
+    {
+      name: "Sam Sung",
+      caption: "Protettore degli smartphone",
+      source: "samsung"
+    },
+    {
+      name: "San Itario",
+      caption: "Protettore dei bagni",
+      source: "sanitario"
+    },
+    {
+      name: "San Antonio Spurs",
+      caption: "Protettore dei giocatori di pallacanestro",
+      source: "san_antonio_spurs"
+    },
+    {
+      name: "San Dwich",
+      caption: "Protettore dello spuntino",
+      source: "sandwich"
     }
 ];
 
 function checkWidth() {
 	let image = document.querySelector("#figure img");
 	image.height = document.getElementById("figure").offsetHeight;
-	console.log(image.height)
 }
 
 window.addEventListener('load', checkWidth);	// Rendering on window load
